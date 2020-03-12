@@ -1,4 +1,21 @@
+template <typename T>
 class List {
-    List* next;
-    int value;
+
+    class Node {
+        public:
+            T* next;
+            int value;
+    };
+
+    private:
+    
+    Node* head;
+
+    List() {
+        head = nullptr;
+    }
+
+    ~List() {
+        delete head;
+    }
 };
